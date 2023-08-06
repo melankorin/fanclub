@@ -1,0 +1,21 @@
+
+{% assign opened = page.opened %}
+
+{% assign id = page.name | split: '.' | first %}
+
+{% assign members = site.data.members.[id] %}
+{% assign uniqueCountries = "" | split: "," %}
+{% for member in members %}
+        {% unless uniqueCountries contains member.country %}
+            {% assign uniqueCountries = uniqueCountries | push: member.country %}
+        {% endunless %}
+{% endfor %}
+{% assign lastMember = members | last %}
+
+<div class="stats">
+    <h2>Fanlisting stats</h2>
+    <p>Date opened: {{ opened | date: "%-d %B %Y" }}</p>
+    <p>Last updated: {{ site.last-updated | date: "%-d %B %Y" }}</p>
+    <p>We have {{ members.size }} {% if members.size == 1 %}member{% else %}members{% endif %} from {{ uniqueCountries.size }} {% if uniqueCountries.size == 1 %}country{% else %}different countries{% endif %}, and <a href="{{ lastMember.url }}">{{ lastMember.name }}</a> is our latest member.</p>
+</div>
+
