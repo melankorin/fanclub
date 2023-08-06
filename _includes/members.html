@@ -1,0 +1,22 @@
+
+
+{% assign id = page.name | split: '.' | first %}
+{% assign members = site.data.members.[id] | sort_natural: "name" %}
+
+<ul>
+    {% for member in members  %}
+        <li>
+            <p>{{ member.name }}</p>
+            <p>{{ member.country }}</p>
+            {% if member.url %}
+                <a href="{{ member.url }}">Website</a>
+            {% endif %}
+            {% if member.display %}
+            <a href="{{ "mailto:" | append: member.email | encode_email }}">E-mail</a></li>
+            {% endif %}
+            {% if member.favourite %}
+                <p>{{ page.favouritePrompt }}: {{ member.favourite }}</p>
+            {% endif %}
+        </li>
+    {% endfor %}
+</ul>
