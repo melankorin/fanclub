@@ -1,0 +1,29 @@
+---
+fanlisting: Delicious
+description: An unofficial fanlisting for all kinds of food!
+favouritePrompt: Favourite food
+opened: 2023-08-05
+---
+
+<header>
+    <h1>{{ page.fanlisting }}</h1>
+</header>
+
+<main>
+
+    <div id="tab1" class="tabcontent">
+        <p>Welcome to <span class="fl-name">{{ page.fanlisting }}</span>, an unofficial fanlisting for all kinds of food!</p>
+        <p>Great turbulent clouds culture cosmic ocean citizens of distant epochs rogue a mote of dust suspended in a sunbeam. Vanquish the impossible across the centuries a very small stage in a vast cosmic arena star stuff harvesting star light something incredible is waiting to be known the only home we've ever known? The sky calls to us muse about white dwarf gathered by gravity Sea of Tranquility rich in mystery and billions upon billions upon billions upon billions upon billions upon billions upon billions.</p>
+        <h1>Page Filename: {{ page.name | split: '.' | first }}</h1>
+        {% include stats.html %}
+    </div>
+
+    <div id="tab4" class="tabcontent">
+        {% include members.html %}
+    </div>
+
+    <div id="tab5" class="tabcontent">
+        {% include buttons.html %}
+    </div>
+
+</main>
