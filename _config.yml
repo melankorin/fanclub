@@ -1,0 +1,10 @@
+last-updated: 2023-08-05
+language: en
+button-sizes: "50x50,75x50,100x50"
+
+defaults:
+  -
+    scope:
+      path: "fanlistings"
+    values:
+      layout: fanlisting
