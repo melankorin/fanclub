@@ -1,0 +1,20 @@
+
+{% assign id = page.name | split: '.' | first %}
+{% assign folderPath = "/assets/img/" | append: id | append: "/buttons/" %}
+
+{% assign buttonSizes = site.button-sizes | split: ',' %}
+
+<div class="buttons">
+    {% for size in buttonSizes %}
+    <div class="resolution {{ size }}">
+        <h3>{{ size }}</h3>
+        <div class="button-container">
+            {% for image in site.static_files %}
+            {% if image.path contains folderPath and image.path contains size %}
+            <img src="{{ image.path }}" alt="" />
+            {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+    {% endfor %}
+</div>
