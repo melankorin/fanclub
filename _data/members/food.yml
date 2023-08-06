@@ -1,0 +1,54 @@
+
+# NEW MEMBERS MUST BE ADDED AT THE BOTTOM TO MAINTAIN CHRONOLOGICAL ORDER.
+
+- name: Sakura
+  country: Japan
+  email: sakura@emailprovider.com
+  url: https://sakurablog.com
+  favourite: Sushi
+  display: true
+
+- name: Alex
+  country: United States
+  email: alex@emailprovider.com
+  favourite: Pizza
+  display: false
+
+- name: Maria
+  country: Brazil
+  email: maria@emailprovider.com
+  favourite: Brigadeiro
+  display: true
+
+- name: Luca
+  country: Italy
+  email: luca@emailprovider.com
+  url: https://luca-animeblog.it
+  favourite: Pasta
+  display: false
+
+- name: Raj
+  country: India
+  email: raj@emailprovider.com
+  url: https://raj-musiclover.in
+  favourite: Biryani
+  display: false
+
+- name: Sofia
+  country: Spain
+  email: sofia@emailprovider.com
+  display: true
+
+- name: Muhammad
+  country: Egypt
+  email: muhammad@emailprovider.com
+  url: https://muhammad-traveldiaries.eg
+  favourite: Koshary
+  display: true
+
+- name: Isabelle
+  country: France
+  email: isabelle@emailprovider.com
+  url: https://isabelle-animeblog.fr
+  favourite: Croissant
+  display: false
