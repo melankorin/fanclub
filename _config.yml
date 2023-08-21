@@ -8,3 +8,6 @@ defaults:
       path: "fanlistings"
     values:
       layout: fanlisting
+
+exclude:
+  - README.md
