@@ -1,6 +1,9 @@
 source 'https://rubygems.org'
 gem 'jekyll'
 
+# Some assorted utilities
+gem 'jekyll-pluralize'
+
 # Webrick serves the website
 gem 'webrick'
 

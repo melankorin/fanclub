@@ -16,6 +16,7 @@
     <h2>Fanlisting stats</h2>
     <p>Date opened: {{ opened | date: "%-d %B %Y" }}</p>
     <p>Last updated: {{ site.last-updated | date: "%-d %B %Y" }}</p>
-    <p>We have {{ members.size }} {% if members.size == 1 %}member{% else %}members{% endif %} from {{ uniqueCountries.size }} {% if uniqueCountries.size == 1 %}country{% else %}different countries{% endif %}, and <a href="{{ lastMember.url }}">{{ lastMember.name }}</a> is our latest member.</p>
+    <!-- <p>We have {{ members.size }} {% if members.size == 1 %}member{% else %}members{% endif %} from {{ uniqueCountries.size }} {% if uniqueCountries.size == 1 %}country{% else %}different countries{% endif %}, and <a href="{{ lastMember.url }}">{{ lastMember.name }}</a> is our latest member.</p> -->
+    <p>We have {{ members.size }} {{ members.size | pluralize: 'member', 'members' }} from {{ uniqueCountries.size }} different {{ uniqueCountries.size | pluralize: 'country', 'countries' }} and <a href="{{ lastMember.url }}">{{ lastMember.name }}</a> is our latest member.</p>
 </div>
 
